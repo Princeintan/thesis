@@ -1,0 +1,15 @@
+
+\chapter{Neural Networks} % Main appendix title
+
+\label{AppendixA} % for referencing this appendix elsewhere, use \ref{AppendixA}
+
+\section{Widrow-Hoff Rule}
+This is introduced by Bernard Widrow and Marcian Hoff. It is also called the Least Mean Square(LMS) method to minimize the error over all training patterns.
+
+This rule is based on the gradient-descent approach, which continues forever. It updates the weights by the following formula:
+$$\Delta w_{i} = \alpha x_{i}e_{i}$$
+where $\Delta w_{i}$ is the weight change for $i^{th}$ pattern, α is the learning rate, $x_{i}$ is the input, and $e_{i}$ is the error(i.e. the difference between the actual value and the desired value).Note that the above rule is for a single output only, and the weight is updated in either of the two cases below
+\begin{itemize}
+    \item Case 1: $t\neq y$ then $$w_{new} = w_{old}+ \Delta w$$
+    \item Case 2: $t =y$, then no change in weight.
+\end{itemize}
